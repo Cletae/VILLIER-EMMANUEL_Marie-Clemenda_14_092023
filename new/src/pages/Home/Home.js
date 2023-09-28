@@ -2,11 +2,12 @@ import { useState } from "react";
 // import { useDispatch } from "react-redux";
 import Header from "../../components/Header/Header";
 import "./Home.css";
-// import useCreateModal from "../../plugins/modal/Modal";
-// import Select from '../../plugins/select/Select';
-// import { DatePicker } from 'date-picker-library';
+import DatePicker from "../../plugins/DatePicker";
+import Select from "../../plugins/Select";
 // import { addEmployee } from "../../redux/employeeSlice";
-import { DEPARTMENT, STATES, TYPE_NAMES, DATA_TYPE } from "../../data";
+import { TYPE_NAMES, DATA_TYPE } from "../../data/data";
+import { stateOptions } from "../../data/stateOptions";
+import { departmentOptions } from "../../data/departementOptions";
 
 const Home = () => {
   const [employee, setEmployee] = useState(DATA_TYPE);
@@ -81,9 +82,15 @@ const Home = () => {
               onChange={(e) => onChange(e.target.value, TYPE_NAMES.lastName)}
             />
             <label htmlFor={TYPE_NAMES.birthDate}>Date of birth</label>
-            {/* <DatePicker id={TYPE_NAMES.birthDate} onChange={(value) => onChange(value, TYPE_NAMES.birthDate)}/> */}
+            <DatePicker
+              id={TYPE_NAMES.birthDate}
+              onChange={(value) => onChange(value, TYPE_NAMES.birthDate)}
+            />
             <label htmlFor={TYPE_NAMES.startDate}>Date of start</label>
-            {/* <DatePicker id={TYPE_NAMES.startDate} onChange={(value) => onChange(value, TYPE_NAMES.startDate)}/> */}
+            <DatePicker
+              id={TYPE_NAMES.startDate}
+              onChange={(value) => onChange(value, TYPE_NAMES.startDate)}
+            />
           </div>
         </div>
 
@@ -102,7 +109,7 @@ const Home = () => {
             onChange={(e) => onChange(e.target.value, TYPE_NAMES.city)}
           />
           <label htmlFor={TYPE_NAMES.state}>State</label>
-          {/* <Select name='States' options={STATES} id={TYPE_NAMES.state} onChange={(value) => onChange(value, TYPE_NAMES.state)} /> */}
+          <Select options={stateOptions} />
           <label htmlFor={TYPE_NAMES.zipCode}>ZIP Code</label>
           <input
             type="text"
@@ -110,8 +117,10 @@ const Home = () => {
             onChange={(e) => onChange(e.target.value, TYPE_NAMES.zipCode)}
           />
         </fieldset>
-        <label htmlFor={TYPE_NAMES.department}>Department</label>
-        {/* <Select name='Department' options={DEPARTMENT} id={TYPE_NAMES.department} onChange={(value) => onChange(value, TYPE_NAMES.department)} /> */}
+        <div className="departement-container">
+          <label htmlFor={TYPE_NAMES.department}>Department</label>
+          <Select options={departmentOptions} />
+        </div>
         <button type="submit" className="submit-btn">
           Save
         </button>

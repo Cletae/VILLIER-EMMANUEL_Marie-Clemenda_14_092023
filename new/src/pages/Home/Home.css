@@ -22,11 +22,13 @@
   
   .basic-info-container input {
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 20px;
     height: 46px;
+    width: 100%;
     padding: 10px;
     border: 1px solid rgb(153, 169, 68);
   }
+
 
 /* Adress Part */
 
@@ -55,6 +57,23 @@
   legend {
     font-size: 2rem;
     color: rgb(153, 169, 68);
+  }
+
+  .departement-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  .departement-container input {
+    border: 1px solid #adadad;
+    border-radius: 8px;
+    font-size: 14px;
+    height: 46px;
+    padding: 10px;
+    border: 1px solid rgb(153, 169, 68);
   }
 
 .submit-btn {

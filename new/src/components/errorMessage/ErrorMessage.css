@@ -1,0 +1,80 @@
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+  }
+  
+  .letter-404 {
+    font-size: 18rem;
+    color: rgb(153, 169, 68);
+  }
+  
+  .message-404 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: rgb(153, 169, 68);
+  }
+  
+  .link-back-to-home {
+    font-size: 1rem;
+    color: rgb(153, 169, 68);
+  }
+  
+  .return__link {
+    border: none;
+    border-radius: 5px;
+    padding: 4.5rem 1rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  @media only screen and (min-width: 1200px) {
+    .hero-section-about {
+      width: 90%;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .hero-section-about {
+      width: 70%;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .hero-section-about {
+      width: 60%;
+    }
+  }
+  
+  @media only screen and (max-width: 675px) {
+    .letter-404 {
+      font-size: 10rem;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media only screen and (max-width: 370px) {
+    h1 {
+      font-size: 1rem;
+    }
+  }
+  @media only screen and (max-width: 360px) {
+    .letter-404 {
+      font-size: 7rem;
+    }
+  
+    .message-404 {
+      font-size: 0.8rem;
+    }
+  
+    .link-back-to-home {
+      font-size: 0.8rem;
+    }
+  }
