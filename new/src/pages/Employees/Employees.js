@@ -1,11 +1,12 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import Navigation from "../../components/Navigation/Navigation";
-import Form from "../../components/Form/Form";
-import "./Home.css";
+import Table from "../../plugins/Tables";
+import "./Employees.css";
 
-const Home = () => {
-  const links = [{ title: "View Current Employees", path: "/employees" }];
+const links = [{ title: "Home", path: "/" }];
+
+function Employees() {
 
   return (
     <>
@@ -15,9 +16,9 @@ const Home = () => {
           <Navigation links={links} />
         </nav>
       </header>
-      <Form />
+      <Table />
     </>
   );
-};
+}
 
-export default Home;
+export default Employees;

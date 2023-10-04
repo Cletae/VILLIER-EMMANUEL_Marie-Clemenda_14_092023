@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useImperativeHandle } from "react";
 import { useState } from "react";
 import ReactSelect from "react-select";
+import { useFormContext } from "react-hook-form";
 
 const customStyles = {
   option: (provided, state) => ({
@@ -26,6 +27,11 @@ const customStyles = {
 const Select = React.forwardRef((props, ref) => {
   const [selectedValue, setSelectedValue] = useState("");
 
+  // const {
+  //   register,
+  //   formState: { errors },
+  // } = useFormContext();
+
   useImperativeHandle(
     ref,
     () => ({
@@ -47,6 +53,8 @@ const Select = React.forwardRef((props, ref) => {
       options={props.options}
       className={"react-select"}
       onChange={(item) => setSelectedValue(item.value)}
+      // {...register("country", { required: "Country is required" })}
+      // required
     />
   );
 });
