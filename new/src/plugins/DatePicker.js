@@ -26,8 +26,10 @@ const DatePicker = React.forwardRef((props, ref) => {
       selected={startDate}
       id={props.id}
       onChange={(date) => setDate(date)}
+      // value={valueDate}
     />
   );
 });
 
 export default DatePicker;
+

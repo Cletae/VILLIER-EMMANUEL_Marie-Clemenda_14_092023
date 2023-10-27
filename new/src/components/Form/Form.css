@@ -97,3 +97,25 @@
 .error-msg {
   color: red;
 }
+
+/* Modal */
+.modal {
+  background: #fef3b5;;
+}
+
+.modal-body {
+  color: #fb0c04;
+}
+
+.modal-close-button1, .modal-close-button2 {
+  border-radius: 5rem;
+  background: rgb(216, 239, 208);
+  color: black;
+  font-size: 2rem;
+}
+
+.modal-close-button1:hover, .modal-close-button2:hover {
+  background-color: rgb(153, 240, 222);
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}

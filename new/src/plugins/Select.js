@@ -1,9 +1,6 @@
 import React from "react";
-import { useEffect } from "react";
-import { useImperativeHandle } from "react";
-import { useState } from "react";
+import { useEffect, useState, useImperativeHandle } from "react";
 import ReactSelect from "react-select";
-import { useFormContext } from "react-hook-form";
 
 const customStyles = {
   option: (provided, state) => ({
@@ -27,11 +24,6 @@ const customStyles = {
 const Select = React.forwardRef((props, ref) => {
   const [selectedValue, setSelectedValue] = useState("");
 
-  // const {
-  //   register,
-  //   formState: { errors },
-  // } = useFormContext();
-
   useImperativeHandle(
     ref,
     () => ({
@@ -51,10 +43,9 @@ const Select = React.forwardRef((props, ref) => {
       styles={customStyles}
       defaultValue={props.options[0]}
       options={props.options}
-      className={"react-select"}
       onChange={(item) => setSelectedValue(item.value)}
-      // {...register("country", { required: "Country is required" })}
-      // required
+      id={props.id}
+      // required 
     />
   );
 });

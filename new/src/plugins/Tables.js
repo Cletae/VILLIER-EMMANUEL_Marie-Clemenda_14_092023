@@ -23,24 +23,16 @@ function Table() {
       },
     },
     {
+      name: "birthDate",
+      label: "Date of Birth",
+      options: {
+        filter: true,
+        sort: true,
+      },
+    },
+    {
       name: "startDate",
       label: "Start Date",
-      options: {
-        filter: true,
-        sort: true,
-      },
-    },
-    {
-      name: "department",
-      label: "Departement",
-      options: {
-        filter: true,
-        sort: true,
-      },
-    },
-    {
-      name: "birthday",
-      label: "Date of Birth",
       options: {
         filter: true,
         sort: true,
@@ -63,7 +55,7 @@ function Table() {
       },
     },
     {
-      name: "country",
+      name: "state",
       label: "State",
       options: {
         filter: true,
@@ -78,19 +70,27 @@ function Table() {
         sort: true,
       },
     },
+    {
+      name: "department",
+      label: "Departement",
+      options: {
+        filter: true,
+        sort: true,
+      },
+    },
   ];
 
   const options = {
     filterType: "dropdown",
   };
 
-  // const employees = useSelector((state) => {
-  //   return state.employeesList.employees.length
-  //     ? state.employeesList.employees
-  //     : [];
-  // });
+  const data = useSelector((state) => {
+    return state.employeesList.employees.length
+      ? state.employeesList.employees
+      : [];
+  });
 
-  const data = useSelector((state) => state.employeesList.employees);
+  // const data = useSelector((state) => state.employeesList.employees);
 
   console.log({ data });
 
