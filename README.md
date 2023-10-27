@@ -24,14 +24,15 @@ Utilisation de [Redux](https://redux.js.org/introduction/getting-started) dans c
 
   - Data Table : [mui-datatables](https://github.com/gregnb/mui-datatables) or (https://www.npmjs.com/package/mui-datatables)
 
-    - npm i mui-datatables
+    - `npm i mui-datatables`
 
   - Datepicker : [react-datepicker](https://github.com/Hacker0x01/react-datepicker) or (https://www.npmjs.com/package/react-datepicker)
 
-    - npm i react-datepicker
+    - `npm i react-datepicker`
 
   - Select : [react-select](https://github.com/JedWatson/react-select) or (https://www.npmjs.com/package/react-select)
-    - npm i react-select
+
+    - `npm i react-select`
 
 ## Getting Started
 
