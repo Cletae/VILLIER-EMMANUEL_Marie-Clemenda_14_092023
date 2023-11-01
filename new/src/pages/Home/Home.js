@@ -8,7 +8,7 @@ const Home = () => {
   const links = [{ title: "View Current Employees", path: "/employees" }];
 
   return (
-    <>
+    <div>
       <header>
         <nav>
           <Header title="HRnet" />
@@ -16,7 +16,7 @@ const Home = () => {
         </nav>
       </header>
       <Form />
-    </>
+    </div>
   );
 };
 

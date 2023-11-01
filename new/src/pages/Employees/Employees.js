@@ -7,9 +7,8 @@ import "./Employees.css";
 const links = [{ title: "Home", path: "/" }];
 
 function Employees() {
-
   return (
-    <>
+    <div>
       <header>
         <nav>
           <Header title="HRnet" />
@@ -17,7 +16,7 @@ function Employees() {
         </nav>
       </header>
       <Table />
-    </>
+    </div>
   );
 }
 
