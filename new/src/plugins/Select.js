@@ -38,6 +38,12 @@ const Select = React.forwardRef((props, ref) => {
     setSelectedValue(props.options[0].value);
   }, [props.options]);
 
+  useEffect(() => {
+    if (props.onChange) {
+      props.onChange(selectedValue);
+    }
+  }, [selectedValue]);
+
   return (
     <ReactSelect
       styles={customStyles}
@@ -45,7 +51,7 @@ const Select = React.forwardRef((props, ref) => {
       options={props.options}
       onChange={(item) => setSelectedValue(item.value)}
       id={props.id}
-      // required 
+      required
     />
   );
 });

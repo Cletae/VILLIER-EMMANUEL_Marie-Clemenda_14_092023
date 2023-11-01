@@ -2,7 +2,7 @@
 
 Welcome to HRnet! This is our company's internal application to create and view employee records.
 
-# Projet #14 - Faites passer une librairie jQuery vers React
+## Projet #14 - Faites passer une librairie jQuery vers React
 
 ## Description
 
@@ -22,15 +22,15 @@ Utilisation de [Redux](https://redux.js.org/introduction/getting-started) dans c
 
 - Libraires utilisées :
 
-  - Data Table : [mui-datatables](https://github.com/gregnb/mui-datatables) or (https://www.npmjs.com/package/mui-datatables)
+  - Data Table : v4.3.0 [mui-datatables](https://github.com/gregnb/mui-datatables)
 
     - `npm i mui-datatables`
 
-  - Datepicker : [react-datepicker](https://github.com/Hacker0x01/react-datepicker) or (https://www.npmjs.com/package/react-datepicker)
+  - Datepicker : v4.21.0 [react-datepicker](https://github.com/Hacker0x01/react-datepicker)
 
     - `npm i react-datepicker`
 
-  - Select : [react-select](https://github.com/JedWatson/react-select) or (https://www.npmjs.com/package/react-select)
+  - Select : v5.7.7 [react-select](https://github.com/JedWatson/react-select)
 
     - `npm i react-select`
 

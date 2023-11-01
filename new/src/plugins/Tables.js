@@ -1,8 +1,7 @@
 import React from "react";
 import MUIDataTable from "mui-datatables";
 import { useSelector } from "react-redux";
-// import { us } from "react";
-// import { mockedList } from "../data/data";
+
 
 function Table() {
   const columns = [
@@ -90,11 +89,7 @@ function Table() {
       : [];
   });
 
-  // const data = useSelector((state) => state.employeesList.employees);
 
-  console.log({ data });
-
-  // console.log({ employees });
 
   return (
     <div className="table-container">

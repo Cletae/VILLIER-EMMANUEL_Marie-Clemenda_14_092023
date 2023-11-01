@@ -17,12 +17,6 @@ const Form = () => {
   const [valueDate, onChangeDate] = useState(new Date());
   const [valueDay, onChangeDay] = useState(new Date());
 
-
-  // const [link, setLink] = useState({
-  //   title: "View Current Employees",
-  //   path: "/employees",
-  // });
-
   const dispatch = useDispatch();
 
   const {
@@ -40,11 +34,11 @@ const Form = () => {
     dispatch(employeeActions.addEmployee(employee));
     setEmployee(DATA_TYPE);
     setDisplayModal(true);
-    // e.preventDefault();
   };
 
   const onChange = (value, fieldName) => {
     let newEmployee = employee;
+
     switch (fieldName) {
       case TYPE_NAMES.firstName:
         newEmployee.firstName = value;
@@ -72,10 +66,12 @@ const Form = () => {
         break;
       case TYPE_NAMES.department:
         newEmployee.department = value;
+
         break;
       default:
         break;
     }
+
     setEmployee(newEmployee);
   };
 
@@ -166,11 +162,7 @@ const Form = () => {
           <Select
             id="state"
             options={stateOptions}
-            // setValue={setValue}
             errors={errors}
-            // rules={{ required: "Please select an option" }}
-            // {...register("State", { required: true })}
-            // {...register("state", { required: "state is required" })}
             onChange={(value) => onChange(value, TYPE_NAMES.state)}
           />
           {errors.state && (
@@ -193,17 +185,17 @@ const Form = () => {
             <span className="error-msg">Please enter your zip-code.</span>
           )}
         </fieldset>
+
+        {/* Departement */}
         <div className="departement-container">
           <label htmlFor="department">Department</label>
           <Select
             id="department"
             options={departmentOptions}
-            // setValue={setValue}
             errors={errors}
-            // rules={{ required: "Please select an option" }}
-            // {...register("Department", { required: true })}
-            onChange={(value) => onChange({value}, TYPE_NAMES.department)}
+            onChange={(value) => onChange(value, TYPE_NAMES.department)}
           />
+
           {errors.department && (
             <span className="error-msg">Please choose a department.</span>
           )}
@@ -220,8 +212,6 @@ const Form = () => {
         message="Employee Created !"
         buttonText1="Ok"
         buttonText2="Cancel"
-        
-        // {links}
       />
     </div>
   );
